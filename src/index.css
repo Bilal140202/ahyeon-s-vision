@@ -1013,7 +1013,8 @@
   }
   .who-grid,
   .story-layout,
-  .viral-grid {
+  .viral-grid,
+  .video-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
