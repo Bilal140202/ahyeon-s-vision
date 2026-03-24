@@ -349,6 +349,55 @@ const Index = () => {
 
       <div className="divider" />
 
+      {/* ===== YOUTUBE VIDEOS ===== */}
+      <section className="tribute-section">
+        <div className="reveal">
+          <div className="section-label">Watch</div>
+          <h2 className="section-title">Hear it for <em>yourself</em></h2>
+        </div>
+        <div className="video-grid reveal">
+          <div className="video-card">
+            <div className="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/uvs_VNgIGCk"
+                title="Ahyeon — Dangerously (Charlie Puth Cover)"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <div className="video-info">
+              <h3 className="video-title">"Dangerously" — Charlie Puth Cover</h3>
+              <p className="video-desc">
+                The cover that broke the internet. 50M+ views. Charlie Puth himself reacted:
+                <strong> "I loved it."</strong> This single performance put Ahyeon on the global radar
+                before she ever officially debuted.
+              </p>
+              <span className="video-stat">50M+ views · April 2023</span>
+            </div>
+          </div>
+          <div className="video-card">
+            <div className="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/pd53hC_8s5c"
+                title="BABYMONSTER — SHEESH MV"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <div className="video-info">
+              <h3 className="video-title">BABYMONSTER — "SHEESH" MV</h3>
+              <p className="video-desc">
+                The first comeback as a full seven-member group. Ahyeon's rap verse into vocal bridge
+                is the moment that silenced every doubter. <strong>400M+ views.</strong>
+              </p>
+              <span className="video-stat">400M+ views · April 2024</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider" />
+
       {/* ===== TIMELINE ===== */}
       <section className="tribute-section">
         <div className="story-layout">
