@@ -1,14 +1,14 @@
 import { useEffect, useRef, useCallback } from "react";
 
 const IMAGES = {
-  hero: "https://i.pinimg.com/736x/a0/1e/83/a01e83b2c7b0b3b0b5b5a5b5b5b5b5b5.jpg",
-  heroPortrait: "https://img.youtube.com/vi/fMetBMjIflQ/maxresdefault.jpg",
-  who: "https://img.youtube.com/vi/WqzTRK5GPWQ/maxresdefault.jpg",
-  viral: "https://img.youtube.com/vi/uvs_VNgIGCk/maxresdefault.jpg",
-  timeline: "https://img.youtube.com/vi/dqlEnbR5JtA/maxresdefault.jpg",
-  personality: "https://img.youtube.com/vi/LJSOb4LWbhU/maxresdefault.jpg",
-  closing: "https://img.youtube.com/vi/CMNahhgR_ss/maxresdefault.jpg",
-  qualities: "https://img.youtube.com/vi/szGqJv-buwk/maxresdefault.jpg",
+  heroPortrait: "https://cdn.kpopping.com/idols/Ahyeon/profile.webp?v=1774366766957",
+  who: "https://legacy.kpopping.com/e8/3/250611-BABYMONSTER-Instagram-Update-with-AHYEON-documents-1.jpeg",
+  viral: "https://legacy.kpopping.com/d4/3/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-1.jpeg",
+  timeline: "https://legacy.kpopping.com/ce/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-4.jpeg",
+  personality: "https://legacy.kpopping.com/6a/3/250611-BABYMONSTER-Instagram-Update-with-AHYEON-documents-2.jpeg",
+  closing: "https://legacy.kpopping.com/51/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-5.jpeg",
+  qualities: "https://legacy.kpopping.com/bd/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-3.jpeg",
+  fansign: "https://legacy.kpopping.com/7b/0/251011-Babymonster-Ahyeon-at-Fansign-Event-documents-1.jpeg",
 };
 
 function useScrollReveal() {
