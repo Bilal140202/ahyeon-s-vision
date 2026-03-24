@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const IMAGES = {
   heroPortrait: "https://cdn.kpopping.com/idols/Ahyeon/profile.webp?v=1774366766957",
@@ -8,8 +8,31 @@ const IMAGES = {
   personality: "https://legacy.kpopping.com/6a/3/250611-BABYMONSTER-Instagram-Update-with-AHYEON-documents-2.jpeg",
   closing: "https://legacy.kpopping.com/51/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-5.jpeg",
   qualities: "https://legacy.kpopping.com/bd/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-3.jpeg",
-  fansign: "https://legacy.kpopping.com/7b/0/251011-Babymonster-Ahyeon-at-Fansign-Event-documents-1.jpeg",
+  birthday: "https://legacy.kpopping.com/0e/5/250411-BABYMONSTER-SNS-Update-HAPPY-BIRTHDAY-AHYEON-documents-1.jpeg",
 };
+
+const GALLERY_PHOTOS = [
+  { src: "https://cdn.kpopping.com/kpics/2026/02/1771875000735-q369uf-0.jpeg", caption: "GMP Airport — Feb 2026" },
+  { src: "https://cdn.kpopping.com/kpics/2026/02/1771875000735-b2acxi-1.jpeg", caption: "GMP Airport — Feb 2026" },
+  { src: "https://cdn.kpopping.com/kpics/2026/02/1771875000735-kxsmpz-2.jpeg", caption: "GMP Airport — Feb 2026" },
+  { src: "https://cdn.kpopping.com/kpics/2026/02/1771718948189-r3gmgi-0.jpeg", caption: "GMP Airport — Feb 2026" },
+  { src: "https://cdn.kpopping.com/kpics/2026/02/1771718948190-dr0iyh-1.jpeg", caption: "GMP Airport — Feb 2026" },
+  { src: "https://cdn.kpopping.com/kpics/2026/02/1771718948190-lsggic-2.jpeg", caption: "GMP Airport — Feb 2026" },
+  { src: "https://legacy.kpopping.com/d4/3/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-1.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
+  { src: "https://legacy.kpopping.com/d4/0/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-2.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
+  { src: "https://legacy.kpopping.com/bd/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-3.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
+  { src: "https://legacy.kpopping.com/ce/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-4.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
+  { src: "https://legacy.kpopping.com/51/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-5.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
+  { src: "https://legacy.kpopping.com/a1/3/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-6.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
+  { src: "https://legacy.kpopping.com/7d/0/260104-Ahyeon-at-TPE-Airport-documents-1.jpeg", caption: "TPE Airport — Jan 2026" },
+  { src: "https://legacy.kpopping.com/58/3/260104-Ahyeon-at-TPE-Airport-documents-2.jpeg", caption: "TPE Airport — Jan 2026" },
+  { src: "https://legacy.kpopping.com/f9/5/260104-Ahyeon-at-TPE-Airport-documents-3.jpeg", caption: "TPE Airport — Jan 2026" },
+  { src: "https://legacy.kpopping.com/7b/0/251011-Babymonster-Ahyeon-at-Fansign-Event-documents-1.jpeg", caption: "KTOWN4U Fansign Event" },
+  { src: "https://legacy.kpopping.com/c9/0/251011-Babymonster-Ahyeon-at-Fansign-Event-documents-2.jpeg", caption: "KTOWN4U Fansign Event" },
+  { src: "https://legacy.kpopping.com/0e/5/250411-BABYMONSTER-SNS-Update-HAPPY-BIRTHDAY-AHYEON-documents-1.jpeg", caption: "Happy Birthday Ahyeon 🎂" },
+  { src: "https://legacy.kpopping.com/e8/3/250611-BABYMONSTER-Instagram-Update-with-AHYEON-documents-1.jpeg", caption: "Instagram Update — Jun 2025" },
+  { src: "https://legacy.kpopping.com/6a/3/250611-BABYMONSTER-Instagram-Update-with-AHYEON-documents-2.jpeg", caption: "Instagram Update — Jun 2025" },
+];
 
 function useScrollReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -18,7 +41,7 @@ function useScrollReveal() {
     if (!el) return;
     const obs = new IntersectionObserver(
       (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("visible"); }),
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
     el.querySelectorAll(".reveal").forEach((c) => obs.observe(c));
     return () => obs.disconnect();
@@ -26,11 +49,60 @@ function useScrollReveal() {
   return ref;
 }
 
+const Lightbox = ({ photos, index, onClose, onPrev, onNext }: {
+  photos: typeof GALLERY_PHOTOS;
+  index: number;
+  onClose: () => void;
+  onPrev: () => void;
+  onNext: () => void;
+}) => {
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") onPrev();
+      if (e.key === "ArrowRight") onNext();
+    };
+    window.addEventListener("keydown", handler);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", handler);
+      document.body.style.overflow = "";
+    };
+  }, [onClose, onPrev, onNext]);
+
+  return (
+    <div className="lightbox-overlay" onClick={onClose}>
+      <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+        <button className="lightbox-close" onClick={onClose} aria-label="Close">✕</button>
+        <button className="lightbox-nav lightbox-prev" onClick={onPrev} aria-label="Previous">‹</button>
+        <div className="lightbox-img-wrapper">
+          <img src={photos[index].src} alt={photos[index].caption} />
+        </div>
+        <button className="lightbox-nav lightbox-next" onClick={onNext} aria-label="Next">›</button>
+        <div className="lightbox-caption">
+          <span>{photos[index].caption}</span>
+          <span className="lightbox-counter">{index + 1} / {photos.length}</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Index = () => {
   const rootRef = useScrollReveal();
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const openLightbox = (i: number) => setLightboxIndex(i);
+  const closeLightbox = () => setLightboxIndex(null);
+  const prevPhoto = () => setLightboxIndex((i) => (i !== null ? (i - 1 + GALLERY_PHOTOS.length) % GALLERY_PHOTOS.length : null));
+  const nextPhoto = () => setLightboxIndex((i) => (i !== null ? (i + 1) % GALLERY_PHOTOS.length : null));
 
   return (
     <div ref={rootRef}>
+      {lightboxIndex !== null && (
+        <Lightbox photos={GALLERY_PHOTOS} index={lightboxIndex} onClose={closeLightbox} onPrev={prevPhoto} onNext={nextPhoto} />
+      )}
+
       {/* ===== HERO ===== */}
       <section className="hero">
         <div className="hero-left">
@@ -67,7 +139,6 @@ const Index = () => {
               <div className="corner tl" /><div className="corner tr" />
               <div className="corner bl" /><div className="corner br" />
             </div>
-
             <div className="stat-chip c1">
               <span className="label">Trained</span>
               <span className="value">5 YEARS</span>
@@ -126,7 +197,7 @@ const Index = () => {
             </p>
           </div>
           <div className="reveal">
-            <div className="section-image" style={{ aspectRatio: "3/4" }}>
+            <div className="section-image natural-image">
               <img src={IMAGES.who} alt="Ahyeon profile" loading="lazy" />
             </div>
             <div className="info-table" style={{ marginTop: 32 }}>
@@ -185,7 +256,7 @@ const Index = () => {
             </p>
           </div>
           <div className="reveal">
-            <div className="section-image" style={{ aspectRatio: "16/9", marginBottom: 28 }}>
+            <div className="section-image natural-image" style={{ marginBottom: 28 }}>
               <img src={IMAGES.viral} alt='Ahyeon performing "Dangerously" cover' loading="lazy" />
             </div>
             <div className="milestone-stack">
@@ -217,7 +288,7 @@ const Index = () => {
         <div className="reveal">
           <div className="section-label">What Makes Her Special</div>
           <h2 className="section-title">Six reasons she is <em>impossible to ignore</em></h2>
-          <div className="section-image" style={{ aspectRatio: "21/9", marginBottom: 40 }}>
+          <div className="section-image natural-image" style={{ marginBottom: 40 }}>
             <img src={IMAGES.qualities} alt="Ahyeon on stage" loading="lazy" />
           </div>
         </div>
@@ -241,13 +312,40 @@ const Index = () => {
 
       <div className="divider" />
 
+      {/* ===== PHOTO GALLERY ===== */}
+      <section className="tribute-section">
+        <div className="reveal">
+          <div className="section-label">Gallery</div>
+          <h2 className="section-title">Moments captured <em>in frame</em></h2>
+        </div>
+        <div className="gallery-grid reveal">
+          {GALLERY_PHOTOS.map((photo, i) => (
+            <div
+              className="gallery-item"
+              key={i}
+              onClick={() => openLightbox(i)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === "Enter" && openLightbox(i)}
+            >
+              <img src={photo.src} alt={photo.caption} loading="lazy" />
+              <div className="gallery-item-overlay">
+                <span>{photo.caption}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="divider" />
+
       {/* ===== TIMELINE ===== */}
       <section className="tribute-section">
         <div className="story-layout">
           <div className="story-aside reveal">
             <div className="section-label">Her Journey</div>
             <h2 className="section-title">The arc of someone<br /><em>the stage waited for</em></h2>
-            <div className="section-image" style={{ aspectRatio: "3/4", marginBottom: 22 }}>
+            <div className="section-image natural-image" style={{ marginBottom: 22 }}>
               <img src={IMAGES.timeline} alt="Ahyeon world tour" loading="lazy" />
             </div>
             <blockquote className="story-quote">
@@ -289,7 +387,7 @@ const Index = () => {
         <div className="reveal">
           <div className="section-label">Off the Stage</div>
           <h2 className="section-title">The person behind <em>the performer</em></h2>
-          <div className="section-image" style={{ aspectRatio: "21/9", marginBottom: 32 }}>
+          <div className="section-image natural-image" style={{ marginBottom: 32 }}>
             <img src={IMAGES.personality} alt="Ahyeon behind the scenes" loading="lazy" />
           </div>
         </div>
@@ -316,7 +414,7 @@ const Index = () => {
         <div className="reveal">
           <div className="section-label">Why It Matters</div>
           <h2 className="section-title">Why you should<br /><em>pay attention</em></h2>
-          <div className="section-image" style={{ aspectRatio: "21/9", marginBottom: 40 }}>
+          <div className="section-image natural-image" style={{ marginBottom: 40 }}>
             <img src={IMAGES.closing} alt="Ahyeon concert performance" loading="lazy" />
           </div>
         </div>
