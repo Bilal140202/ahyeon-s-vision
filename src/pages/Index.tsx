@@ -1,37 +1,47 @@
 import { useEffect, useRef, useState } from "react";
 
+// Fandom CDN base (full-res originals)
+const F = (path: string, cb: string) =>
+  `https://static.wikia.nocookie.net/kpop/images/${path}/revision/latest?cb=${cb}`;
+
 const IMAGES = {
-  heroPortrait: "https://cdn.kpopping.com/idols/Ahyeon/profile.webp?v=1774366766957",
-  who: "https://legacy.kpopping.com/e8/3/250611-BABYMONSTER-Instagram-Update-with-AHYEON-documents-1.jpeg",
-  viral: "https://legacy.kpopping.com/d4/3/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-1.jpeg",
-  timeline: "https://legacy.kpopping.com/ce/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-4.jpeg",
-  personality: "https://legacy.kpopping.com/6a/3/250611-BABYMONSTER-Instagram-Update-with-AHYEON-documents-2.jpeg",
-  closing: "https://legacy.kpopping.com/51/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-5.jpeg",
-  qualities: "https://legacy.kpopping.com/bd/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-3.jpeg",
+  heroPortrait: F("8/85/BABYMONSTER_Ahyeon_profile_photo_%281%29.png", "20230627104545"),
+  who: F("9/97/BABYMONSTER_Ahyeon_profile_photo_%282%29.png", "20230627104602"),
+  viral: F("c/c8/BABYMONSTER_Ahyeon_BABYMONS7ER_concept_photo_1.png", "20240314150212"),
+  timeline: F("1/16/BABYMONSTER_Ahyeon_Drip_visual_teaser.png", "20241022163920"),
+  personality: F("6/6f/BABYMONSTER_Ahyeon_Forever_visual_photo.png", "20240624234430"),
+  closing: F("0/0b/BABYMONSTER_Ahyeon_Drip_concept_photo_1.png", "20241101233330"),
+  qualities: F("7/76/BABYMONSTER_Ahyeon_BABYMONS7ER_concept_photo_2.png", "20240314150300"),
   birthday: "https://legacy.kpopping.com/0e/5/250411-BABYMONSTER-SNS-Update-HAPPY-BIRTHDAY-AHYEON-documents-1.jpeg",
 };
 
 const GALLERY_PHOTOS = [
+  // Official concept photos (Fandom CDN)
+  { src: F("8/85/BABYMONSTER_Ahyeon_profile_photo_%281%29.png", "20230627104545"), caption: "Official Profile — BABYMONSTER" },
+  { src: F("9/97/BABYMONSTER_Ahyeon_profile_photo_%282%29.png", "20230627104602"), caption: "Official Profile — BABYMONSTER" },
+  { src: F("7/76/BABYMONSTER_Ahyeon_profile_photo_%283%29.png", "20230627104617"), caption: "Official Profile — BABYMONSTER" },
+  { src: F("c/c8/BABYMONSTER_Ahyeon_BABYMONS7ER_concept_photo_1.png", "20240314150212"), caption: "BABYMONS7ER — Concept Photo" },
+  { src: F("7/76/BABYMONSTER_Ahyeon_BABYMONS7ER_concept_photo_2.png", "20240314150300"), caption: "BABYMONS7ER — Concept Photo" },
+  { src: F("6/6f/BABYMONSTER_Ahyeon_Forever_visual_photo.png", "20240624234430"), caption: '"Forever" — Visual Photo' },
+  { src: F("1/16/BABYMONSTER_Ahyeon_Drip_visual_teaser.png", "20241022163920"), caption: "DRIP — Visual Teaser" },
+  { src: F("0/0b/BABYMONSTER_Ahyeon_Drip_concept_photo_1.png", "20241101233330"), caption: "DRIP — Concept Photo" },
+  { src: F("6/66/BABYMONSTER_Ahyeon_Drip_Genie_Magazine.png", "20241102024755"), caption: "DRIP — Genie Magazine" },
+  // Fantaken & events (kpopping CDN)
   { src: "https://cdn.kpopping.com/kpics/2026/02/1771875000735-q369uf-0.jpeg", caption: "GMP Airport — Feb 2026" },
   { src: "https://cdn.kpopping.com/kpics/2026/02/1771875000735-b2acxi-1.jpeg", caption: "GMP Airport — Feb 2026" },
   { src: "https://cdn.kpopping.com/kpics/2026/02/1771875000735-kxsmpz-2.jpeg", caption: "GMP Airport — Feb 2026" },
   { src: "https://cdn.kpopping.com/kpics/2026/02/1771718948189-r3gmgi-0.jpeg", caption: "GMP Airport — Feb 2026" },
   { src: "https://cdn.kpopping.com/kpics/2026/02/1771718948190-dr0iyh-1.jpeg", caption: "GMP Airport — Feb 2026" },
-  { src: "https://cdn.kpopping.com/kpics/2026/02/1771718948190-lsggic-2.jpeg", caption: "GMP Airport — Feb 2026" },
-  { src: "https://legacy.kpopping.com/d4/3/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-1.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
-  { src: "https://legacy.kpopping.com/d4/0/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-2.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
-  { src: "https://legacy.kpopping.com/bd/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-3.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
-  { src: "https://legacy.kpopping.com/ce/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-4.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
-  { src: "https://legacy.kpopping.com/51/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-5.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
-  { src: "https://legacy.kpopping.com/a1/3/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-6.jpeg", caption: "LOVE MONSTERS Tour — Taipei D2" },
+  { src: "https://legacy.kpopping.com/d4/3/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-1.jpeg", caption: "LOVE MONSTERS Tour — Taipei" },
+  { src: "https://legacy.kpopping.com/d4/0/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-2.jpeg", caption: "LOVE MONSTERS Tour — Taipei" },
+  { src: "https://legacy.kpopping.com/bd/4/260103-Ahyeon-at-LOVE-MONSTERS-Asia-Tour-in-Taipei-D2-documents-3.jpeg", caption: "LOVE MONSTERS Tour — Taipei" },
   { src: "https://legacy.kpopping.com/7d/0/260104-Ahyeon-at-TPE-Airport-documents-1.jpeg", caption: "TPE Airport — Jan 2026" },
-  { src: "https://legacy.kpopping.com/58/3/260104-Ahyeon-at-TPE-Airport-documents-2.jpeg", caption: "TPE Airport — Jan 2026" },
-  { src: "https://legacy.kpopping.com/f9/5/260104-Ahyeon-at-TPE-Airport-documents-3.jpeg", caption: "TPE Airport — Jan 2026" },
   { src: "https://legacy.kpopping.com/7b/0/251011-Babymonster-Ahyeon-at-Fansign-Event-documents-1.jpeg", caption: "KTOWN4U Fansign Event" },
   { src: "https://legacy.kpopping.com/c9/0/251011-Babymonster-Ahyeon-at-Fansign-Event-documents-2.jpeg", caption: "KTOWN4U Fansign Event" },
   { src: "https://legacy.kpopping.com/0e/5/250411-BABYMONSTER-SNS-Update-HAPPY-BIRTHDAY-AHYEON-documents-1.jpeg", caption: "Happy Birthday Ahyeon 🎂" },
   { src: "https://legacy.kpopping.com/e8/3/250611-BABYMONSTER-Instagram-Update-with-AHYEON-documents-1.jpeg", caption: "Instagram Update — Jun 2025" },
   { src: "https://legacy.kpopping.com/6a/3/250611-BABYMONSTER-Instagram-Update-with-AHYEON-documents-2.jpeg", caption: "Instagram Update — Jun 2025" },
+  { src: "https://legacy.kpopping.com/58/3/260104-Ahyeon-at-TPE-Airport-documents-2.jpeg", caption: "TPE Airport — Jan 2026" },
 ];
 
 function useScrollReveal() {
