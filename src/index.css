@@ -968,6 +968,18 @@
   }
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+  }
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(5),
+  .gallery-item:nth-child(10),
+  .gallery-item:nth-child(16),
+  .gallery-item:nth-child(21) {
+    grid-row: span 1;
+  }
+  .gallery-item:nth-child(4),
+  .gallery-item:nth-child(15) {
+    grid-column: span 1;
   }
   .story-aside {
     position: static;
