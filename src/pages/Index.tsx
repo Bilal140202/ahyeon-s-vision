@@ -1,4 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
+
+const HERO_VIDEOS = [
+  "https://owrqsjgqqnbhexycooak.supabase.co/storage/v1/object/public/videos/tiktok_chisacan_7446251322732481797__1774410246713_chisacan%207446251322732481797%20Download%20MP4%20HD.mp4",
+  "https://owrqsjgqqnbhexycooak.supabase.co/storage/v1/object/public/videos/tiktok_navillera.aep_7567256733043723528__1774410029243_navillera%20aep%207567256733043723528%20Download%20M.mp4",
+];
 
 // Fandom CDN base (full-res originals)
 const F = (path: string, cb: string) =>
