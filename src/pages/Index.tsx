@@ -155,7 +155,15 @@ const Index = () => {
         <div className="hero-right">
           <div className="hero-visual">
             <div className="portrait-frame">
-              <img src={IMAGES.heroPortrait} alt="Jung Ahyeon portrait" loading="eager" />
+              <video
+                ref={videoRef}
+                src={HERO_VIDEOS[currentVideo]}
+                muted={isMuted}
+                autoPlay
+                playsInline
+                onEnded={handleVideoEnd}
+                style={{ width: "100%", height: "100%", objectFit: "cover", position: "relative", zIndex: 1 }}
+              />
               <div className="portrait-roles">
                 <span className="role-tag">Main Vocalist</span>
                 <span className="role-tag">Lead Rapper</span>
@@ -168,10 +176,16 @@ const Index = () => {
               <div className="corner tl" /><div className="corner tr" />
               <div className="corner bl" /><div className="corner br" />
             </div>
-            <div className="stat-chip c1">
-              <span className="label">Trained</span>
-              <span className="value">5 YEARS</span>
-            </div>
+            {/* Sound toggle */}
+            <button
+              onClick={() => setIsMuted((m) => !m)}
+              className="stat-chip c1"
+              style={{ cursor: "pointer" }}
+              aria-label={isMuted ? "Unmute" : "Mute"}
+            >
+              <span className="label">Sound</span>
+              <span className="value">{isMuted ? "🔇 TAP" : "🔊 ON"}</span>
+            </button>
             <div className="stat-chip c2">
               <span className="label">Debut</span>
               <span className="value">APR 1 2024</span>
