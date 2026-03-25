@@ -106,20 +106,40 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext }: {
 const Index = () => {
   const rootRef = useScrollReveal();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-  const [currentVideo, setCurrentVideo] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoARef = useRef<HTMLVideoElement>(null);
+  const videoBRef = useRef<HTMLVideoElement>(null);
+  // activeIndex even → videoA is active; odd → videoB is active
+  const aIsActive = activeIndex % 2 === 0;
 
-  const handleVideoEnd = useCallback(() => {
-    setCurrentVideo((prev) => (prev + 1) % HERO_VIDEOS.length);
+  const handleEnded = useCallback(() => {
+    const nextIdx = activeIndex + 1;
+    const nextSrc = HERO_VIDEOS[nextIdx % HERO_VIDEOS.length];
+    // Preload next video on the inactive element, then swap
+    const nextRef = aIsActive ? videoBRef : videoARef;
+    if (nextRef.current) {
+      nextRef.current.src = nextSrc;
+      nextRef.current.load();
+      nextRef.current.play().catch(() => {});
+    }
+    setActiveIndex(nextIdx);
+  }, [activeIndex, aIsActive]);
+
+  // Initial play
+  useEffect(() => {
+    if (videoARef.current) {
+      videoARef.current.src = HERO_VIDEOS[0];
+      videoARef.current.load();
+      videoARef.current.play().catch(() => {});
+    }
   }, []);
 
+  // Sync mute state to both videos
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load();
-      videoRef.current.play().catch(() => {});
-    }
-  }, [currentVideo]);
+    if (videoARef.current) videoARef.current.muted = isMuted;
+    if (videoBRef.current) videoBRef.current.muted = isMuted;
+  }, [isMuted]);
 
   const openLightbox = (i: number) => setLightboxIndex(i);
   const closeLightbox = () => setLightboxIndex(null);
@@ -134,15 +154,21 @@ const Index = () => {
 
       {/* ===== HERO ===== */}
       <section className="hero">
-        {/* Video background */}
+        {/* Crossfade video background */}
         <div className="hero-video-bg">
           <video
-            ref={videoRef}
-            src={HERO_VIDEOS[currentVideo]}
+            ref={videoARef}
+            className={`hero-video-layer ${aIsActive ? "active" : ""}`}
             muted={isMuted}
-            autoPlay
             playsInline
-            onEnded={handleVideoEnd}
+            onEnded={aIsActive ? handleEnded : undefined}
+          />
+          <video
+            ref={videoBRef}
+            className={`hero-video-layer ${!aIsActive ? "active" : ""}`}
+            muted={isMuted}
+            playsInline
+            onEnded={!aIsActive ? handleEnded : undefined}
           />
           <div className="hero-video-overlay" />
         </div>
