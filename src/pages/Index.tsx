@@ -426,7 +426,7 @@ const Index = () => {
           <div className="video-card">
             <div className="video-embed">
               <iframe
-                src="https://www.youtube.com/embed/uvs_VNgIGCk"
+                src="https://www.youtube.com/embed/xw7Y2gviWbA"
                 title="Ahyeon — Dangerously (Charlie Puth Cover)"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
