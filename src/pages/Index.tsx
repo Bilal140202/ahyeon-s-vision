@@ -465,6 +465,145 @@ const Index = () => {
 
       <div className="divider" />
 
+      {/* ===== IT GIRL IMPACT ===== */}
+      <section className="tribute-section">
+        <div className="reveal">
+          <div className="section-label" style={{ color: "var(--rose)" }}>Impact</div>
+          <h2 className="section-title">The 5th-Gen <em>It Girl</em></h2>
+        </div>
+        <div className="highlight-feature reveal" style={{ borderLeft: "3px solid var(--rose)" }}>
+          <div className="highlight-feature-content">
+            <p style={{ fontSize: 18, lineHeight: 1.7, marginBottom: 20 }}>
+              When YG unveiled Ahyeon's comeback teaser photos on March 15, 2024, the internet didn't just react — it 
+              <strong style={{ color: "var(--rose)" }}> declared a coronation</strong>. Her concept photos racked up 
+              <strong> 1.1 million views, 42K retweets, and 70K likes</strong> in under 24 hours — the highest engagement 
+              of any BABYMONSTER member by a wide margin.
+            </p>
+            <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 24, color: "var(--paper)", opacity: 0.8 }}>
+              Fans and non-fans alike drew the lineage: <strong>Lee Hyori</strong> (1st-gen) → <strong>Krystal</strong> (2nd-gen) → 
+              <strong> Jennie</strong> (3rd-gen) → <strong>Wonyoung</strong> (4th-gen) → <strong style={{ color: "var(--rose)" }}>Ahyeon</strong> (5th-gen). 
+              Her "face card" became a meme of its own — an acknowledgment that her visual presence alone commands attention 
+              before she even opens her mouth.
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+              {[
+                '"Her face alone screams 5th-gen it girl!"',
+                '"Make way for the most impactful pre-debut idol ever."',
+                '"Ahyeon face card never declines!"',
+                '"A new queen is coming — her visuals are next level."',
+              ].map((q) => (
+                <span key={q} style={{
+                  display: "inline-block", padding: "8px 16px", fontSize: 13,
+                  background: "rgba(196,98,122,0.1)", border: "1px solid rgba(196,98,122,0.25)",
+                  borderRadius: 4, fontStyle: "italic", color: "var(--rose-light)",
+                }}>{q}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* ===== CHINA POWER INFLUENCE ===== */}
+      <section className="tribute-section">
+        <div className="reveal">
+          <div className="section-label" style={{ color: "#e84040" }}>China Power</div>
+          <h2 className="section-title">The bridge across <em>languages</em></h2>
+        </div>
+        <div className="highlight-feature reveal" style={{ borderLeft: "3px solid #e84040" }}>
+          <div className="highlight-feature-content">
+            <p style={{ fontSize: 18, lineHeight: 1.7, marginBottom: 20 }}>
+              Ahyeon speaks <strong style={{ color: "#e84040" }}>fluent Mandarin Chinese</strong> — learned since age 7 — 
+              and it isn't just a party trick. Her Chinese name is <strong>郑雅贤 (Zhèng Yǎxián)</strong>, and she uses 
+              it naturally with Chinese-speaking fans, creating a direct emotional connection that most K-pop idols can only 
+              approximate through translators.
+            </p>
+            <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 20, color: "var(--paper)", opacity: 0.8 }}>
+              During a trip to Singapore, when a fan tried to give her a handmade gift but was blocked by YG staff, 
+              Ahyeon <strong>switched to Chinese</strong> to secretly tell the fan to pass it to her later — knowing her 
+              Korean-speaking manager wouldn't understand. The moment went viral as proof of her devotion to her fans and 
+              her resourcefulness.
+            </p>
+            <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 24, color: "var(--paper)", opacity: 0.8 }}>
+              Her Chinese fanbase (C-fans) is among the most dedicated in the 5th-gen K-pop landscape. 
+              They organize large-scale birthday projects, LED billboard displays across major Chinese cities, 
+              and coordinated streaming campaigns that consistently push BABYMONSTER content into trending topics 
+              on Weibo and Bilibili. In a group that already has multinational members from Thailand, Japan, and Korea, 
+              <strong style={{ color: "#e84040" }}> Ahyeon is the member China chose</strong>.
+            </p>
+            <div className="milestone-stack" style={{ maxWidth: 500 }}>
+              {[
+                ["🇨🇳", "Trilingual", "Korean · English · Mandarin Chinese — fluent in all three since childhood"],
+                ["💝", "Fan Devotion", "Uses Chinese to personally connect with fans, even circumventing language barriers with staff"],
+                ["📢", "C-Fan Power", "Massive organized fan projects across Weibo, Bilibili, and physical billboards in Chinese cities"],
+              ].map(([icon, title, desc]) => (
+                <div className="milestone-card" key={title} style={{ borderColor: "rgba(232,64,64,0.2)" }}>
+                  <span className="milestone-icon">{icon}</span>
+                  <div>
+                    <strong style={{ color: "#e84040" }}>{title}</strong>
+                    <p style={{ fontSize: 13, opacity: 0.7, marginTop: 4 }}>{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* ===== GOLDEN COVER ===== */}
+      <section className="tribute-section">
+        <div className="reveal">
+          <div className="section-label" style={{ color: "var(--gold)" }}>Golden Moment</div>
+          <h2 className="section-title">The cover that rewrote <em>the standard</em></h2>
+        </div>
+        <div className="highlight-feature reveal" style={{ borderLeft: "3px solid var(--gold)" }}>
+          <div className="highlight-feature-content">
+            <p style={{ fontSize: 18, lineHeight: 1.7, marginBottom: 20 }}>
+              At the <strong style={{ color: "var(--gold)" }}>2025 MAMA Awards</strong> in Hong Kong's Kai Tak Stadium, 
+              BABYMONSTER performed a cover of <strong>"Golden"</strong> — the notoriously difficult OST from the Netflix anime 
+              <em> KPop Demon Hunters</em>. The original creators had publicly stated it would be 
+              <strong> "challenging to find a singer capable of performing the song live in its original key."</strong> 
+              It had been dubbed a "live-impossible track."
+            </p>
+            <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 20, color: "var(--paper)", opacity: 0.8 }}>
+              BABYMONSTER refused to transpose it. They performed <strong style={{ color: "var(--gold)" }}>in the original key, fully live</strong>. 
+              Starting with lyrical, delicate vocals, they built to explosive power — and then Ahyeon delivered the 
+              <strong> final ultra-high note ad-lib</strong> that the Chosun Ilbo described as "testing the limits of human capability." 
+              The performance was immediately hailed as the <strong>definitive version</strong> of "Golden."
+            </p>
+            <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 24, color: "var(--paper)", opacity: 0.8 }}>
+              Social media and communities erupted: <em>"It's unbelievable they performed it live in the original key,"</em> 
+              <em> "Astonishing vocal ability,"</em> <em>"Skill speaks for itself."</em> YouTube and TikTok flooded with 
+              reaction videos. The original singer <strong>Rei Mei</strong> personally responded with support, saying 
+              <strong style={{ color: "var(--gold)" }}> "Don't belittle or compare!"</strong> — a public endorsement of their rendition.
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
+              {[
+                ["🏟️", "2025 MAMA Awards", "Kai Tak Stadium, Hong Kong"],
+                ["🎵", "Original Key — Live", "The 'impossible' track, uncompromised"],
+                ["🔥", "Ahyeon's High Note", "Ultra-high ad-lib that stunned the arena"],
+                ["👑", "The Definitive Version", "Chosun Ilbo: 'Before and after BABYMONSTER'"],
+              ].map(([icon, title, desc]) => (
+                <div key={title} style={{
+                  flex: "1 1 200px", padding: "16px 20px",
+                  background: "rgba(201,168,76,0.06)", border: "1px solid rgba(201,168,76,0.2)",
+                  borderRadius: 4,
+                }}>
+                  <div style={{ fontSize: 22, marginBottom: 6 }}>{icon}</div>
+                  <strong style={{ color: "var(--gold)", fontSize: 14 }}>{title}</strong>
+                  <p style={{ fontSize: 12, opacity: 0.6, marginTop: 4 }}>{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="divider" />
+
       {/* ===== TIMELINE ===== */}
       <section className="tribute-section">
         <div className="story-layout">

@@ -1109,3 +1109,21 @@
   .lightbox-prev { left: 4px; }
   .lightbox-next { right: 4px; }
 }
+
+/* ===== HIGHLIGHT FEATURE SECTIONS ===== */
+.highlight-feature {
+  padding: 32px 36px;
+  background: rgba(245, 240, 232, 0.02);
+  margin-top: 32px;
+}
+.highlight-feature-content {
+  max-width: 740px;
+}
+.highlight-feature-content p {
+  color: var(--paper);
+}
+@media (max-width: 600px) {
+  .highlight-feature {
+    padding: 20px 18px;
+  }
+}
