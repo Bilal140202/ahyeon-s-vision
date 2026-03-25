@@ -560,7 +560,7 @@ const Index = () => {
             There are artists you enjoy. And then there are artists where you think: <strong>I want to watch where this goes.</strong> Ahyeon is the second kind. And she is barely eighteen.
           </p>
           <div className="cta-row">
-            <a <a href="https://www.youtube.com/watch?v=xw7Y2gviWbA" target="_blank" rel="noopener noreferrer" className="btn btn-primary"> target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href="https://www.youtube.com/watch?v=xw7Y2gviWbA" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               Watch "Dangerously" Cover
             </a>
             <a href="https://www.youtube.com/@BABYMONSTER" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
