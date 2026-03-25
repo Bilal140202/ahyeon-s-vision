@@ -1,4 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
+
+const HERO_VIDEOS = [
+  "https://owrqsjgqqnbhexycooak.supabase.co/storage/v1/object/public/videos/tiktok_chisacan_7446251322732481797__1774410246713_chisacan%207446251322732481797%20Download%20MP4%20HD.mp4",
+  "https://owrqsjgqqnbhexycooak.supabase.co/storage/v1/object/public/videos/tiktok_navillera.aep_7567256733043723528__1774410029243_navillera%20aep%207567256733043723528%20Download%20M.mp4",
+];
 
 // Fandom CDN base (full-res originals)
 const F = (path: string, cb: string) =>
@@ -101,6 +106,20 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext }: {
 const Index = () => {
   const rootRef = useScrollReveal();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [currentVideo, setCurrentVideo] = useState(0);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleVideoEnd = useCallback(() => {
+    setCurrentVideo((prev) => (prev + 1) % HERO_VIDEOS.length);
+  }, []);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load();
+      videoRef.current.play().catch(() => {});
+    }
+  }, [currentVideo]);
 
   const openLightbox = (i: number) => setLightboxIndex(i);
   const closeLightbox = () => setLightboxIndex(null);
@@ -136,7 +155,15 @@ const Index = () => {
         <div className="hero-right">
           <div className="hero-visual">
             <div className="portrait-frame">
-              <img src={IMAGES.heroPortrait} alt="Jung Ahyeon portrait" loading="eager" />
+              <video
+                ref={videoRef}
+                src={HERO_VIDEOS[currentVideo]}
+                muted={isMuted}
+                autoPlay
+                playsInline
+                onEnded={handleVideoEnd}
+                style={{ width: "100%", height: "100%", objectFit: "cover", position: "relative", zIndex: 1 }}
+              />
               <div className="portrait-roles">
                 <span className="role-tag">Main Vocalist</span>
                 <span className="role-tag">Lead Rapper</span>
@@ -149,10 +176,16 @@ const Index = () => {
               <div className="corner tl" /><div className="corner tr" />
               <div className="corner bl" /><div className="corner br" />
             </div>
-            <div className="stat-chip c1">
-              <span className="label">Trained</span>
-              <span className="value">5 YEARS</span>
-            </div>
+            {/* Sound toggle */}
+            <button
+              onClick={() => setIsMuted((m) => !m)}
+              className="stat-chip c1"
+              style={{ cursor: "pointer" }}
+              aria-label={isMuted ? "Unmute" : "Mute"}
+            >
+              <span className="label">Sound</span>
+              <span className="value">{isMuted ? "🔇 TAP" : "🔊 ON"}</span>
+            </button>
             <div className="stat-chip c2">
               <span className="label">Debut</span>
               <span className="value">APR 1 2024</span>
