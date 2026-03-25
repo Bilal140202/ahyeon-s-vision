@@ -81,10 +81,17 @@
   inset: 0;
   z-index: 0;
 }
-.hero-video-bg video {
+.hero-video-layer {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+.hero-video-layer.active {
+  opacity: 1;
 }
 .hero-video-overlay {
   position: absolute;
