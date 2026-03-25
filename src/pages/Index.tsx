@@ -106,6 +106,20 @@ const Lightbox = ({ photos, index, onClose, onPrev, onNext }: {
 const Index = () => {
   const rootRef = useScrollReveal();
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [currentVideo, setCurrentVideo] = useState(0);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleVideoEnd = useCallback(() => {
+    setCurrentVideo((prev) => (prev + 1) % HERO_VIDEOS.length);
+  }, []);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load();
+      videoRef.current.play().catch(() => {});
+    }
+  }, [currentVideo]);
 
   const openLightbox = (i: number) => setLightboxIndex(i);
   const closeLightbox = () => setLightboxIndex(null);
