@@ -426,7 +426,7 @@ const Index = () => {
           <div className="video-card">
             <div className="video-embed">
               <iframe
-                src="https://www.youtube.com/embed/uvs_VNgIGCk"
+                src="https://www.youtube.com/embed/xw7Y2gviWbA"
                 title="Ahyeon — Dangerously (Charlie Puth Cover)"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -445,7 +445,7 @@ const Index = () => {
           <div className="video-card">
             <div className="video-embed">
               <iframe
-                src="https://www.youtube.com/embed/pd53hC_8s5c"
+                src="https://www.youtube.com/embed/2wA_b6YHjqQ"
                 title="BABYMONSTER — SHEESH MV"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -560,7 +560,7 @@ const Index = () => {
             There are artists you enjoy. And then there are artists where you think: <strong>I want to watch where this goes.</strong> Ahyeon is the second kind. And she is barely eighteen.
           </p>
           <div className="cta-row">
-            <a href="https://www.youtube.com/watch?v=uvs_VNgIGCk" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href="https://www.youtube.com/watch?v=xw7Y2gviWbA" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               Watch "Dangerously" Cover
             </a>
             <a href="https://www.youtube.com/@BABYMONSTER" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
