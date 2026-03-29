@@ -2,12 +2,12 @@
 
 > A cinematic, editorial-style tribute to **Jung Ahyeon (정아현)** — Main Vocalist, Lead Rapper, and Center of BABYMONSTER (YG Entertainment).
 
+[![Live Demo](https://img.shields.io/badge/Live-ahyeon--vision.netlify.app-blueviolet?style=for-the-badge)](https://ahyeonjung.netlify.app/)
 [![Built with React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat&logo=typescript)](https://typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat&logo=vite)](https://vitejs.dev)
 
 ## Sections
-
 - 🎬 Hero — Background video with crossfade transitions
 - 🎤 Viral Moment — The "Dangerously" cover (50M+ views)
 - 👑 5th-Gen It Girl — Face card impact & cultural influence
@@ -19,7 +19,6 @@
 - 🦋 Personality — The person behind the performer
 
 ## Quick Facts
-
 | Field | Info |
 |---|---|
 | Name | Jung Ahyeon (정아현 / 郑雅贤) |
@@ -29,16 +28,13 @@
 | Languages | Korean, English, Mandarin Chinese |
 
 ## Run Locally
-
 ```bash
 bun install
 bun run dev
 ```
 
 ## Deploy
-
 Netlify auto-deploys on push to `main`. Build: `bun run build` → publish: `dist/`
 
 ---
-
 *Built with 🦋 by a Hyeonie*
