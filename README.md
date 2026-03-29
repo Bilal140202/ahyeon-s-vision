@@ -1,35 +1,44 @@
-# JUNG AHYEON — The One Who Was Worth the Wait
+# 🦋 Jung Ahyeon — The One Who Was Worth the Wait
 
-A tribute page dedicated to **Jung Ahyeon (정아현)**, Main Vocalist, Lead Rapper, and Center of [BABYMONSTER](https://www.youtube.com/@BABYMONSTER) under YG Entertainment.
+> A cinematic, editorial-style tribute to **Jung Ahyeon (정아현)** — Main Vocalist, Lead Rapper, and Center of BABYMONSTER (YG Entertainment).
 
-## About
+[![Built with React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=flat&logo=typescript)](https://typescriptlang.org)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=flat&logo=vite)](https://vitejs.dev)
 
-This is a cinematic, editorial-style tribute site celebrating Ahyeon's journey — from her viral "Dangerously" cover (50M+ views) to her coronation as the 5th-Generation It Girl of K-pop.
+## Sections
 
-### Featured Sections
-- 🎬 **Hero** — Background video with crossfade transitions
-- 🎤 **Viral Moment** — The "Dangerously" cover that broke the internet
-- 👑 **5th-Gen It Girl** — Her face card impact and cultural influence
-- 🇨🇳 **China Power** — Trilingual fluency and massive Chinese fanbase
-- 🏆 **Golden Cover** — The "impossible" live performance at 2025 MAMA Awards
-- 📸 **Photo Gallery** — Lightbox viewer with curated images
-- 🎥 **YouTube Embeds** — Dangerously cover & SHEESH MV
-- 📅 **Timeline** — From trainee to world tour
-- 🦋 **Personality** — The person behind the performer
-
-## Tech Stack
-- React 18 + TypeScript
-- Vite
-- Tailwind CSS
-- Custom CSS animations & scroll-reveal
+- 🎬 Hero — Background video with crossfade transitions
+- 🎤 Viral Moment — The "Dangerously" cover (50M+ views)
+- 👑 5th-Gen It Girl — Face card impact & cultural influence
+- 🇨🇳 China Power — Trilingual fluency & massive Chinese fanbase
+- 🏆 Golden Cover — Live performance at 2025 MAMA Awards
+- 📸 Photo Gallery — Lightbox viewer with curated images
+- 🎥 YouTube Embeds — Dangerously cover & SHEESH MV
+- 📅 Timeline — From trainee to world tour
+- 🦋 Personality — The person behind the performer
 
 ## Quick Facts
-- **Name**: Jung Ahyeon (정아현 / 郑雅贤)
-- **Born**: April 11, 2007 · Chuncheon, South Korea
-- **Group**: BABYMONSTER (YG Entertainment)
-- **Position**: Main Vocalist, Lead Rapper, Center
-- **Languages**: Korean, English, Mandarin Chinese
+
+| Field | Info |
+|---|---|
+| Name | Jung Ahyeon (정아현 / 郑雅贤) |
+| Born | April 11, 2007 · Chuncheon, South Korea |
+| Group | BABYMONSTER (YG Entertainment) |
+| Position | Main Vocalist, Lead Rapper, Center |
+| Languages | Korean, English, Mandarin Chinese |
+
+## Run Locally
+
+```bash
+bun install
+bun run dev
+```
+
+## Deploy
+
+Netlify auto-deploys on push to `main`. Build: `bun run build` → publish: `dist/`
 
 ---
 
-*Built with 🦋 by Hyeonies*
+*Built with 🦋 by a Hyeonie*
