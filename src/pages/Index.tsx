@@ -828,7 +828,10 @@ const Index = () => {
               ["Apr 1, 2024", "Official Debut — BABYMONS7ER", 'Ahyeon debuted with the full group. Over 460,000 pre-orders. Debuted #3 Circle Album Chart.'],
               ["Nov 2024", "DRIP Studio Album — 1M+ Sales, Billboard 200", "BABYMONSTER released debut studio album DRIP, selling over 1 million copies in South Korea and entering the Billboard 200."],
               ["Jan 2025", 'Hello Monsters World Tour — First Live "Dangerously"', "BABYMONSTER launched their first world tour at KSPO Dome Seoul (~26,000 seats). Ahyeon performed \"Dangerously\" live for the first time as her solo stage."],
-              ["2025–Now", "We Go Up EP · Still Writing the Story", "Ahyeon chose to skip the 2026 CSAT — a declaration of total commitment to her career as a performer. She is 18. The story is very much still being written."],
+              ["2025–26", "Hello Monsters → LOVE MONSTERS finale (Taipei, Jan 2026)", "BABYMONSTER's first world tour rolled into the LOVE MONSTERS Asia fan-concert tour, capping at Taipei Arena (Jan 2–3, 2026) — Ahyeon worked the crowd in fluent Mandarin to 24,000 fans."],
+              ["Apr 2026", "KGMA Solo Female #1 + SHEESH 400M", "Won KGMA Solo Female Artist of April (33,380 votes) on Apr 13; SHEESH hit 400M YouTube views on Apr 17 — fastest K-pop girl-group debut song ever to do so."],
+              ["May–Jun 2026", "CHOOM + SUGAR HONEY ICE TEA — back-to-back hits", "3rd mini album CHOOM (May 4, 149M+ MV views) then the summer single SUGAR HONEY ICE TEA (Jun 7) which debuted at #1 on the global YouTube chart and crossed 10M views in under 12 hours."],
+              ["Jun 2026 →", "CHOOM World Tour · First Domes", "28+ shows across Asia, Oceania, the Americas and Europe — including BABYMONSTER's first-ever solo dome concerts at Kyocera Dome Osaka (Sep 22–23, 2026). She is 19. The story is very much still being written."],
             ].map(([year, title, desc]) => (
               <div className="timeline-item" key={year}>
                 <div className="timeline-dot" />
