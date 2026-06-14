@@ -488,7 +488,46 @@ const Index = () => {
                 The first comeback as a full seven-member group. Ahyeon's rap verse into vocal bridge
                 is the moment that silenced every doubter. <strong>400M+ views.</strong>
               </p>
-              <span className="video-stat">400M+ views · April 2024</span>
+              <span className="video-stat">400M+ views · April 2024 · Apr 17 2026 record</span>
+            </div>
+          </div>
+          <div className="video-card">
+            <div className="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/x3eqqoZPV_E"
+                title='BABYMONSTER — "CHOOM" MV'
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <div className="video-info">
+              <h3 className="video-title">BABYMONSTER — "CHOOM" (춤) MV</h3>
+              <p className="video-desc">
+                The 3rd mini album title track, released May 4, 2026. Hip-hop, hand-mic live, immediate viral
+                traction. Music-show stages widely praised for being performed entirely on hand mics with no
+                ear monitors. <strong>149M+ views in six weeks.</strong>
+              </p>
+              <span className="video-stat">149M+ views · May 2026</span>
+            </div>
+          </div>
+          <div className="video-card">
+            <div className="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/naoGk-Zjc1s"
+                title='BABYMONSTER — "SUGAR HONEY ICE TEA" MV'
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <div className="video-info">
+              <h3 className="video-title">BABYMONSTER — "SUGAR HONEY ICE TEA" MV</h3>
+              <p className="video-desc">
+                The cheeky-acronym summer single dropped June 7, 2026. Crossed
+                <strong> 10M YouTube views in under 12 hours</strong> and debuted at
+                <strong> #1 on the global YouTube music chart</strong> — solidifying their
+                "Summer Queen" status.
+              </p>
+              <span className="video-stat">58M+ views · Jun 2026 · #1 Global YT</span>
             </div>
           </div>
         </div>
