@@ -659,12 +659,18 @@ const Index = () => {
               reaction videos. The original singer <strong>Rei Mei</strong> personally responded with support, saying 
               <strong style={{ color: "var(--gold)" }}> "Don't belittle or compare!"</strong> — a public endorsement of their rendition.
             </p>
+            <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 24, color: "var(--paper)", opacity: 0.8 }}>
+              That vocal authority carried straight into 2026: on <strong style={{ color: "var(--gold)" }}>April 13, 2026</strong>,
+              Ahyeon was crowned <strong>KGMA "Solo Female Artist of April" #1</strong> with
+              <strong> 33,380 votes</strong> — her first major solo-named accolade, won while she was still
+              promoting only as a BABYMONSTER member.
+            </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
               {[
                 ["🏟️", "2025 MAMA Awards", "Kai Tak Stadium, Hong Kong"],
                 ["🎵", "Original Key — Live", "The 'impossible' track, uncompromised"],
                 ["🔥", "Ahyeon's High Note", "Ultra-high ad-lib that stunned the arena"],
-                ["👑", "The Definitive Version", "Chosun Ilbo: 'Before and after BABYMONSTER'"],
+                ["🏆", "KGMA Apr 2026 — #1", "Solo Female Artist of April · 33,380 votes"],
               ].map(([icon, title, desc]) => (
                 <div key={title} style={{
                   flex: "1 1 200px", padding: "16px 20px",
