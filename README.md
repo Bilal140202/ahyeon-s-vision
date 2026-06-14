@@ -1,34 +1,68 @@
-﻿<div align="center">
-  <img src="https://via.placeholder.com/1200x300/1a1a2e/e94560?text=ahyeon-s-vision+-+Creative+Showcase" alt="ahyeon-s-vision Banner" width="100%" />
-  <br />
-  <h1>🎨 ahyeon-s-vision</h1>
-  <p><strong>A High-Performance Creative Showcase Built with React and Vite</strong></p>
+<div align="center">
+  <h1>🦋 Jung Ahyeon — Cinematic Tribute</h1>
+  <p><strong>A cinematic tribute site for Jung Ahyeon (정아현 / 郑雅贤) of BABYMONSTER</strong></p>
 
   <p>
-    <img src="https://img.shields.io/badge/Framework-React%20%2B%20Vite-61DAFB?style=for-the-badge&logo=react" alt="React & Vite" />
-    <img src="https://img.shields.io/badge/Styling-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS" />
-    <img src="https://img.shields.io/badge/Testing-Playwright-2EAD33?style=for-the-badge&logo=playwright" alt="Playwright" />
-    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
+    <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react" alt="React 18" />
+    <img src="https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite" alt="Vite 5" />
+    <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript 5" />
+    <img src="https://img.shields.io/badge/Bun-✓-FBF0DF?style=for-the-badge&logo=bun" alt="Bun" />
+    <img src="https://img.shields.io/badge/Netlify-Deploy-00C7B7?style=for-the-badge&logo=netlify" alt="Netlify" />
   </p>
 </div>
 
 ---
 
 ## 🌟 Overview
-**ahyeon-s-vision** is a beautifully crafted creative showcase application, built with the modern React and Vite stack. It delivers an immersive, high-performance visual experience with comprehensive testing coverage.
 
-## 🚀 Key Features
-- ⚡ **Blazing Fast:** Powered by Vite for near-instant dev builds.
-- 🎨 **Polished UI:** Tailwind CSS-driven design with consistent tokens.
-- 🧪 **Tested:** End-to-end with Playwright; unit tested with Vitest.
-- 🚀 **Netlify Deployed:** Continuous deployment pre-configured.
+A long-form, scroll-driven tribute page covering Ahyeon's pre-debut viral era, her return,
+the BABYMONSTER years, and her **2026 coronation** — CHOOM, SUGAR HONEY ICE TEA, the KGMA
+Solo Female #1 win, Vogue Hong Kong, and the CHOOM World Tour.
+
+## ✨ Sections
+
+- **Hero** — crossfading TikTok-clip video background with stat chips
+- **Who Is She** — bio + structured info table
+- **The Viral Moment** — "Dangerously" cover + Charlie Puth reaction
+- **Six Qualities** — what makes her impossible to ignore
+- **Gallery** — locally-hosted lightbox of 28+ photos
+- **Watch** — 4 YouTube embeds: Dangerously cover · SHEESH · CHOOM · SUGAR HONEY ICE TEA
+- **It Girl Impact · China Power · Golden / KGMA** — narrative highlights
+- **2026 Timeline** ⭐ NEW — every verified Jan–Jun 2026 milestone with a stat-strip
+- **CHOOM World Tour** ⭐ NEW — 28+ dates, 5 continents, first dome at Kyocera Osaka
+- **Her Journey** — full career arc timeline through 2026
+- **Personality** + **Closing**
+
+## 🎂 Quick Facts
+
+| | |
+|---|---|
+| **Name** | Jung Ahyeon · 정아현 · 郑雅贤 (Zhèng Yǎxián) |
+| **Born** | Apr 11, 2007 · Chuncheon, Gangwon-do |
+| **Group** | BABYMONSTER (YG Entertainment) |
+| **Positions** | Main Vocalist · Lead Rapper · Lead Dancer · Center · Face |
+| **Languages** | Korean · English (age 5) · Mandarin (age 7) |
+| **2026 Highlights** | KGMA Solo Female #1 · CHOOM · SUGAR HONEY ICE TEA · Vogue HK · #1 Global YT |
+
+## 🛠 Stack
+
+- React 18 + TypeScript 5 + Vite 5
+- Tailwind CSS v3 + shadcn/ui
+- Hand-authored cinematic CSS (Cormorant Garamond / Bebas Neue / DM Sans)
+- All images locally hosted under `src/assets/ahyeon/`
+- Deployed on Netlify with SPA routing (`public/_redirects` + `netlify.toml`)
 
 ## 📦 Getting Started
-`ash
-git clone https://github.com/Bilal140202/ahyeon-s-vision.git
+
+```bash
 bun install
 bun run dev
-`
+```
 
 ## 📜 License
-This project is licensed under the MIT License.
+
+MIT.
+
+---
+
+<div align="center"><em>🦋 by a Hyeonie · Updated Jun 14, 2026</em></div>
