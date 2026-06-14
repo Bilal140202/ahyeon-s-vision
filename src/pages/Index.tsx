@@ -595,18 +595,27 @@ const Index = () => {
               Korean-speaking manager wouldn't understand. The moment went viral as proof of her devotion to her fans and 
               her resourcefulness.
             </p>
+            <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 20, color: "var(--paper)", opacity: 0.8 }}>
+              On <strong style={{ color: "#e84040" }}>Jan 2–3, 2026</strong> BABYMONSTER closed their LOVE MONSTERS
+              Asia fan-concert tour at Taipei Arena (24,000 fans across two nights) — the
+              <strong> first K-pop act to play Taipei Arena in 2026</strong>. Ahyeon worked the crowd
+              entirely in Mandarin, apologising mid-song in Chinese (<em>"對不起，再來一次"</em>) and asking
+              the encore crowd "有沒有人要吃火鍋?" — moments that went mega-viral across Weibo and Bilibili.
+            </p>
             <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 24, color: "var(--paper)", opacity: 0.8 }}>
-              Her Chinese fanbase (C-fans) is among the most dedicated in the 5th-gen K-pop landscape. 
-              They organize large-scale birthday projects, LED billboard displays across major Chinese cities, 
-              and coordinated streaming campaigns that consistently push BABYMONSTER content into trending topics 
-              on Weibo and Bilibili. In a group that already has multinational members from Thailand, Japan, and Korea, 
+              Her Chinese fanbase (C-fans) is among the most dedicated in the 5th-gen K-pop landscape.
+              They organize large-scale birthday projects, LED billboard displays across major Chinese cities,
+              and coordinated streaming campaigns that consistently push BABYMONSTER content into trending topics
+              on Weibo and Bilibili. YG even ran a China-exclusive <strong>JD.com (京东) video fan signing
+              on June 20, 2026</strong> with Ahyeon among the seven members. In a group that already has
+              multinational members from Thailand, Japan, and Korea,
               <strong style={{ color: "#e84040" }}> Ahyeon is the member China chose</strong>.
             </p>
             <div className="milestone-stack" style={{ maxWidth: 500 }}>
               {[
                 ["🇨🇳", "Trilingual", "Korean · English · Mandarin Chinese — fluent in all three since childhood"],
-                ["💝", "Fan Devotion", "Uses Chinese to personally connect with fans, even circumventing language barriers with staff"],
-                ["📢", "C-Fan Power", "Massive organized fan projects across Weibo, Bilibili, and physical billboards in Chinese cities"],
+                ["🎤", "Taipei Arena 2026", "First KPop act to play Taipei Arena in 2026 — worked the crowd in Mandarin"],
+                ["📢", "C-Fan Power", "JD.com video fan-sign Jun 2026 · billboards across Chinese cities · top of Weibo trends"],
               ].map(([icon, title, desc]) => (
                 <div className="milestone-card" key={title} style={{ borderColor: "rgba(232,64,64,0.2)" }}>
                   <span className="milestone-icon">{icon}</span>
