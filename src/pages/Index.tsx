@@ -897,7 +897,7 @@ const Index = () => {
             solo stages to sold-out arenas across four continents — <strong>at 17 and 18 years old</strong>.
           </p>
           <p>
-            There are artists you enjoy. And then there are artists where you think: <strong>I want to watch where this goes.</strong> Ahyeon is the second kind. And she is barely eighteen.
+            There are artists you enjoy. And then there are artists where you think: <strong>I want to watch where this goes.</strong> Ahyeon is the second kind. And she just turned nineteen.
           </p>
           <div className="cta-row">
             <a href="https://www.youtube.com/watch?v=xw7Y2gviWbA" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
