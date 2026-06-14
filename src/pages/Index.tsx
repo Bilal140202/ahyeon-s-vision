@@ -222,7 +222,8 @@ const Index = () => {
           <p className="hero-tagline">"The voice you hear once — and spend the rest of your life looking for in other music."</p>
           <p className="hero-desc">
             She went viral before she debuted. She came back from absence and made the whole world notice.
-            She is 18 years old, trilingual, the designated center of BABYMONSTER — and barely getting started.
+            Now 19, trilingual, the designated center of BABYMONSTER — and in 2026 she's headlining
+            domes, topping global YouTube charts, and gracing Vogue covers. Barely getting started.
           </p>
           <div className="scroll-hint">
             <div className="scroll-line" />
