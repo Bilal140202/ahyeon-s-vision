@@ -407,7 +407,7 @@ const Index = () => {
             ["03", "The Trilingualism", "She has spoken English since age 5 and Mandarin since age 7. She connects with global fans in their language naturally, not as a practiced phrase."],
             ["04", "The Center Energy", "YG labeled her the \"definite center\" before the group had a public name. Her fancams consistently rank among the highest-viewed per performance across every tour stop."],
             ["05", "The Resilience", "She missed debut due to health. When her return was announced, #WelcomeBackAhyeon drew millions of interactions in 24 hours. She came back and her vocals were re-recorded into existing singles."],
-            ["06", "The Ceiling", "She is 18 years old. She chose to skip her college entrance exams to fully commit to music. What you are watching now is not a peak. It is a beginning."],
+            ["06", "The Ceiling", "She just turned 19, skipped her college entrance exams to fully commit to music, and in the first half of 2026 alone has headlined Taipei Arena, covered Vogue HK, won KGMA Solo Female #1, and topped the global YouTube chart. What you are watching now is not a peak. It is a runway."],
           ].map(([num, title, desc]) => (
             <div className="quality-card reveal" key={num}>
               <span className="quality-num">{num}</span>
