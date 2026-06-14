@@ -25,6 +25,11 @@ import fansign2 from "@/assets/ahyeon/fansign2.jpg";
 import birthday from "@/assets/ahyeon/birthday.jpg";
 import insta1 from "@/assets/ahyeon/insta1.jpg";
 import insta2 from "@/assets/ahyeon/insta2.jpg";
+// 2026 era
+import choomMv from "@/assets/ahyeon/2026/choom_mv.jpg";
+import choomMusicCore from "@/assets/ahyeon/2026/choom_music_core.jpg";
+import shitMv from "@/assets/ahyeon/2026/shit_mv.jpg";
+import shitPerf from "@/assets/ahyeon/2026/shit_perf.jpg";
 
 const HERO_VIDEOS = [
   "https://owrqsjgqqnbhexycooak.supabase.co/storage/v1/object/public/videos/tiktok_chisacan_7446251322732481797__1774410246713_chisacan%207446251322732481797%20Download%20MP4%20HD.mp4",
