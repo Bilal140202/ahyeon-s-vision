@@ -72,6 +72,11 @@ const GALLERY_PHOTOS = [
   { src: insta1, caption: "Instagram Update — Jun 2025" },
   { src: insta2, caption: "Instagram Update — Jun 2025" },
   { src: tpeAirport2, caption: "TPE Airport — Jan 2026" },
+  // 2026 era
+  { src: choomMv, caption: "CHOOM — Official MV (May 2026)" },
+  { src: choomMusicCore, caption: "CHOOM — MBC Music Core, May 9 2026" },
+  { src: shitMv, caption: "SUGAR HONEY ICE TEA — MV (Jun 2026)" },
+  { src: shitPerf, caption: "SUGAR HONEY ICE TEA — Performance Video" },
 ];
 
 function useScrollReveal() {
