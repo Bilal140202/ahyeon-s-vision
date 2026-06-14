@@ -683,6 +683,119 @@ const Index = () => {
 
       <div className="divider" />
 
+      {/* ===== 2026 TIMELINE ===== */}
+      <section className="tribute-section">
+        <div className="reveal">
+          <div className="section-label" style={{ color: "var(--gold)" }}>2026 — The Year So Far</div>
+          <h2 className="section-title">Six months. <em>One coronation.</em></h2>
+          <p style={{ maxWidth: 760, fontSize: 16, lineHeight: 1.7, opacity: 0.8, marginBottom: 28 }}>
+            From a sold-out Taipei Arena finale to Vogue HK covers, a KGMA Solo Female #1, two back-to-back
+            BABYMONSTER comebacks, a YouTube #1, and the world's first BABYMONSTER dome tour — here is
+            every verified Ahyeon milestone between Jan 1 and Jun 14, 2026.
+          </p>
+        </div>
+
+        {/* Stat strip */}
+        <div className="stat-strip reveal">
+          {[
+            ["149M+", "CHOOM MV views"],
+            ["58M+", "SHIT MV views (1 week)"],
+            ["#1", "Global YouTube Music Chart"],
+            ["400M", "SHEESH (fastest girl-group debut song)"],
+            ["33,380", "KGMA Solo Female #1 votes"],
+            ["440K+", "LOVE MONSTERS tour attendees"],
+          ].map(([num, label]) => (
+            <div className="stat-cell" key={label}>
+              <div className="stat-num">{num}</div>
+              <div className="stat-label">{label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="timeline reveal" style={{ marginTop: 40 }}>
+          {[
+            ["Jan 2–3, 2026", "LOVE MONSTERS Finale — Taipei Arena", "First K-pop act to play Taipei Arena in 2026. 24,000 fans across two nights, capping a tour that drew 440,000+ across Asia. Ahyeon worked the crowd in Mandarin and asked the encore: '有沒有人要吃火鍋?'"],
+            ["Jan 8, 2026", "LeSportsac × BABYMONSTER — Spectator Collection", "Japan-exclusive campaign. Ahyeon's individual pictorial released as part of the first visual drop (second visual drop followed Mar 12)."],
+            ["Feb 5, 2026", "M Countdown — 'Really Like You' (Reverse Chart Run)", "A 2024 DRIP b-side virally re-entered Korean charts after TikTok blew up. BABYMONSTER returned to M Countdown to perform it live as a full group."],
+            ["Mar 4, 2026", "Vogue Hong Kong — March Cover", "BABYMONSTER on the cover under the headline 'The Only Way Is Up.' Ahyeon featured in the cover story and interviews."],
+            ["Mar 16 → 31, 2026", "CHOOM World Tour Announced", "Japan leg confirmed Mar 16, Seoul opening dates Mar 31. First-ever solo dome concerts on the calendar (Kyocera Dome Osaka, Sep 22–23)."],
+            ["Mar 26, 2026", "Vogue × GQ Event — Hong Kong", "Ahyeon attended the Vogue HK × GQ joint event in Hong Kong. Heavy C-fan press coverage at Incheon and HKG airports."],
+            ["Apr 11, 2026", "Ahyeon's 19th Birthday 🎂", "Korean age 20. Fan birthday cafés held near YG Entertainment in Hapjeong; member Weverse messages and official BABYMONSTER socials joined in."],
+            ["Apr 13, 2026", "🏆 KGMA — 'Artist of April' Solo Female #1", "Won the Korea Grand Music Awards' Solo Female Artist of April category with 33,380 votes — her real 2026 solo accolade ahead of the May CHOOM comeback."],
+            ["Apr 17, 2026", "SHEESH — 400M YouTube Views", "747 days after release — the fastest K-pop girl-group debut song to ever hit 400M views. A halo moment ahead of the comeback."],
+            ["May 4, 2026", "💿 3rd Mini Album — CHOOM (춤)", "BABYMONSTER's 3rd mini album. 4 tracks: MOON · CHOOM · I LIKE IT · LOCKED IN. Hip-hop title-track described as a song meant to 'turn the whole world into a giant dance floor.'"],
+            ["May 9–10, 2026", "CHOOM Music-Show Debut — Hand-Mic Live", "First stages on Music Core and Inkigayo performed entirely on hand mics with no ear monitors. Allkpop article racked up 12,741 upvotes praising the live execution."],
+            ["May 11, 2026", "Asia / Oceania CHOOM Tour Dates Announced", "Tour expanded to 14+ Asia-Pacific cities including a first dome run at Kyocera Dome Osaka in September."],
+            ["May 19, 2026", "BANILA CO Brand Event — Seongsu-dong", "Ahyeon and the full BABYMONSTER lineup at the launch event for the Covericious Ultimate White Cushion in Seoul."],
+            ["May 25–30, 2026", "SUGAR HONEY ICE TEA Teasers Drop", "Summer single announced with a lime-green poster; individual teaser photos for Ahyeon and Ruka released around May 30. YG called it a 'lightning-fast' one-month follow-up to CHOOM."],
+            ["Jun 7, 2026", "🍯 SUGAR HONEY ICE TEA — MV Release", "Digital single drops at midnight KST. The cheeky-acronym summer flex anthem becomes the talk of the town for its sweet/saucy double-meaning concept."],
+            ["Jun 8, 2026", "10M Views in Under 12 Hours", "S.H.I.T. MV passes 10 million YouTube views within half a day of release."],
+            ["Jun 10, 2026", "🥇 #1 — Global YouTube Music Chart", "SUGAR HONEY ICE TEA debuts at #1 on YouTube's global music chart. The Performance Video drops the same day (already past 20M views)."],
+            ["Jun 12, 2026", "'Summer Queen' — First SHIT Stages", "First SUGAR HONEY ICE TEA music-show stages air on MBC and SBS. Chosun/OSEN declares BABYMONSTER has 'solidified Summer Queen status.'"],
+            ["Jun 20, 2026 (next)", "JD.com China Video Fan-Sign", "China-exclusive video fan signing organised on JD.com (京东自营) — 15 slots per member, including Ahyeon. Registration ran Jun 1–7."],
+          ].map(([year, title, desc]) => (
+            <div className="timeline-item" key={year as string}>
+              <div className="timeline-dot" />
+              <div className="timeline-year">{year}</div>
+              <div className="timeline-content">
+                <h4>{title}</h4>
+                <p>{desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* ===== CHOOM WORLD TOUR 2026–27 ===== */}
+      <section className="tribute-section">
+        <div className="reveal">
+          <div className="section-label" style={{ color: "var(--rose)" }}>Upcoming · 28+ Shows · 5 Continents</div>
+          <h2 className="section-title">BABYMONSTER World Tour<br /><em>[ 춤 · CHOOM ]</em></h2>
+          <p style={{ maxWidth: 760, fontSize: 16, lineHeight: 1.7, opacity: 0.8, marginBottom: 28 }}>
+            Their second world tour and biggest production yet — kicking off in Seoul on Jun 26.
+            Headlined by their <strong style={{ color: "var(--rose)" }}>first-ever solo dome concerts</strong> at
+            Kyocera Dome Osaka. North America, Europe and South America dates land in 2027.
+          </p>
+        </div>
+        <div className="tours-grid reveal">
+          {[
+            ["Jun 26–28, 2026", "Seoul", "Jamsil Indoor Stadium", "🇰🇷", "Opening"],
+            ["Jul 8–9, 2026", "Kobe", "Glion Arena Kobe", "🇯🇵", ""],
+            ["Jul 28–29, 2026", "Fukuoka", "Marine Messe Fukuoka Hall A", "🇯🇵", ""],
+            ["Aug 1–2, 2026", "Yokohama", "Pia Arena MM", "🇯🇵", ""],
+            ["Aug 11–12, 2026", "Chiba", "LaLa Arena Tokyo-Bay", "🇯🇵", ""],
+            ["Aug 16, 2026", "Nagoya", "IG Arena", "🇯🇵", ""],
+            ["Sep 5, 2026", "Manila", "SM Mall of Asia Arena", "🇵🇭", ""],
+            ["Sep 12, 2026", "Macao", "The Venetian Arena", "🇲🇴", ""],
+            ["Sep 22–23, 2026", "Osaka", "Kyocera Dome", "🇯🇵", "⭐ 1st Dome"],
+            ["Oct 17, 2026", "Jakarta", "Indonesia Arena", "🇮🇩", ""],
+            ["Nov 7–8, 2026", "Bangkok", "Impact Arena", "🇹🇭", ""],
+            ["Nov 14, 2026", "Kuala Lumpur", "Unifi Arena", "🇲🇾", ""],
+            ["Nov 21–22, 2026", "Taipei", "Taipei Arena", "🇹🇼", ""],
+            ["Nov 28–29, 2026", "Singapore", "Singapore Indoor Stadium", "🇸🇬", ""],
+            ["Dec 8, 2026", "Auckland", "Spark Arena", "🇳🇿", ""],
+            ["Dec 11, 2026", "Melbourne", "Rod Laver Arena", "🇦🇺", ""],
+            ["Dec 13, 2026", "Sydney", "Qudos Bank Arena", "🇦🇺", ""],
+            ["Jan 9, 2027", "Hong Kong", "AsiaWorld-Arena", "🇭🇰", ""],
+            ["2027 — TBA", "Americas & Europe", "North America · South America · Europe legs to be announced", "🌎", "TBA"],
+          ].map(([date, city, venue, flag, badge]) => (
+            <div className="tour-card" key={`${date}-${city}`}>
+              <div className="tour-flag">{flag}</div>
+              <div className="tour-date">{date}</div>
+              <div className="tour-city">{city}</div>
+              <div className="tour-venue">{venue}</div>
+              {badge && <div className="tour-badge">{badge}</div>}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="divider" />
+
+
+
       {/* ===== TIMELINE ===== */}
       <section className="tribute-section">
         <div className="story-layout">
