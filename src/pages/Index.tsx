@@ -25,6 +25,11 @@ import fansign2 from "@/assets/ahyeon/fansign2.jpg";
 import birthday from "@/assets/ahyeon/birthday.jpg";
 import insta1 from "@/assets/ahyeon/insta1.jpg";
 import insta2 from "@/assets/ahyeon/insta2.jpg";
+// 2026 era
+import choomMv from "@/assets/ahyeon/2026/choom_mv.jpg";
+import choomMusicCore from "@/assets/ahyeon/2026/choom_music_core.jpg";
+import shitMv from "@/assets/ahyeon/2026/shit_mv.jpg";
+import shitPerf from "@/assets/ahyeon/2026/shit_perf.jpg";
 
 const HERO_VIDEOS = [
   "https://owrqsjgqqnbhexycooak.supabase.co/storage/v1/object/public/videos/tiktok_chisacan_7446251322732481797__1774410246713_chisacan%207446251322732481797%20Download%20MP4%20HD.mp4",
@@ -67,6 +72,11 @@ const GALLERY_PHOTOS = [
   { src: insta1, caption: "Instagram Update — Jun 2025" },
   { src: insta2, caption: "Instagram Update — Jun 2025" },
   { src: tpeAirport2, caption: "TPE Airport — Jan 2026" },
+  // 2026 era
+  { src: choomMv, caption: "CHOOM — Official MV (May 2026)" },
+  { src: choomMusicCore, caption: "CHOOM — MBC Music Core, May 9 2026" },
+  { src: shitMv, caption: "SUGAR HONEY ICE TEA — MV (Jun 2026)" },
+  { src: shitPerf, caption: "SUGAR HONEY ICE TEA — Performance Video" },
 ];
 
 function useScrollReveal() {
@@ -212,7 +222,8 @@ const Index = () => {
           <p className="hero-tagline">"The voice you hear once — and spend the rest of your life looking for in other music."</p>
           <p className="hero-desc">
             She went viral before she debuted. She came back from absence and made the whole world notice.
-            She is 18 years old, trilingual, the designated center of BABYMONSTER — and barely getting started.
+            Now 19, trilingual, the designated center of BABYMONSTER — and in 2026 she's headlining
+            domes, topping global YouTube charts, and gracing Vogue covers. Barely getting started.
           </p>
           <div className="scroll-hint">
             <div className="scroll-line" />
@@ -396,7 +407,7 @@ const Index = () => {
             ["03", "The Trilingualism", "She has spoken English since age 5 and Mandarin since age 7. She connects with global fans in their language naturally, not as a practiced phrase."],
             ["04", "The Center Energy", "YG labeled her the \"definite center\" before the group had a public name. Her fancams consistently rank among the highest-viewed per performance across every tour stop."],
             ["05", "The Resilience", "She missed debut due to health. When her return was announced, #WelcomeBackAhyeon drew millions of interactions in 24 hours. She came back and her vocals were re-recorded into existing singles."],
-            ["06", "The Ceiling", "She is 18 years old. She chose to skip her college entrance exams to fully commit to music. What you are watching now is not a peak. It is a beginning."],
+            ["06", "The Ceiling", "She just turned 19, skipped her college entrance exams to fully commit to music, and in the first half of 2026 alone has headlined Taipei Arena, covered Vogue HK, won KGMA Solo Female #1, and topped the global YouTube chart. What you are watching now is not a peak. It is a runway."],
           ].map(([num, title, desc]) => (
             <div className="quality-card reveal" key={num}>
               <span className="quality-num">{num}</span>
@@ -477,7 +488,46 @@ const Index = () => {
                 The first comeback as a full seven-member group. Ahyeon's rap verse into vocal bridge
                 is the moment that silenced every doubter. <strong>400M+ views.</strong>
               </p>
-              <span className="video-stat">400M+ views · April 2024</span>
+              <span className="video-stat">400M+ views · April 2024 · Apr 17 2026 record</span>
+            </div>
+          </div>
+          <div className="video-card">
+            <div className="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/x3eqqoZPV_E"
+                title='BABYMONSTER — "CHOOM" MV'
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <div className="video-info">
+              <h3 className="video-title">BABYMONSTER — "CHOOM" (춤) MV</h3>
+              <p className="video-desc">
+                The 3rd mini album title track, released May 4, 2026. Hip-hop, hand-mic live, immediate viral
+                traction. Music-show stages widely praised for being performed entirely on hand mics with no
+                ear monitors. <strong>149M+ views in six weeks.</strong>
+              </p>
+              <span className="video-stat">149M+ views · May 2026</span>
+            </div>
+          </div>
+          <div className="video-card">
+            <div className="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/naoGk-Zjc1s"
+                title='BABYMONSTER — "SUGAR HONEY ICE TEA" MV'
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <div className="video-info">
+              <h3 className="video-title">BABYMONSTER — "SUGAR HONEY ICE TEA" MV</h3>
+              <p className="video-desc">
+                The cheeky-acronym summer single dropped June 7, 2026. Crossed
+                <strong> 10M YouTube views in under 12 hours</strong> and debuted at
+                <strong> #1 on the global YouTube music chart</strong> — solidifying their
+                "Summer Queen" status.
+              </p>
+              <span className="video-stat">58M+ views · Jun 2026 · #1 Global YT</span>
             </div>
           </div>
         </div>
@@ -545,18 +595,27 @@ const Index = () => {
               Korean-speaking manager wouldn't understand. The moment went viral as proof of her devotion to her fans and 
               her resourcefulness.
             </p>
+            <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 20, color: "var(--paper)", opacity: 0.8 }}>
+              On <strong style={{ color: "#e84040" }}>Jan 2–3, 2026</strong> BABYMONSTER closed their LOVE MONSTERS
+              Asia fan-concert tour at Taipei Arena (24,000 fans across two nights) — the
+              <strong> first K-pop act to play Taipei Arena in 2026</strong>. Ahyeon worked the crowd
+              entirely in Mandarin, apologising mid-song in Chinese (<em>"對不起，再來一次"</em>) and asking
+              the encore crowd "有沒有人要吃火鍋?" — moments that went mega-viral across Weibo and Bilibili.
+            </p>
             <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 24, color: "var(--paper)", opacity: 0.8 }}>
-              Her Chinese fanbase (C-fans) is among the most dedicated in the 5th-gen K-pop landscape. 
-              They organize large-scale birthday projects, LED billboard displays across major Chinese cities, 
-              and coordinated streaming campaigns that consistently push BABYMONSTER content into trending topics 
-              on Weibo and Bilibili. In a group that already has multinational members from Thailand, Japan, and Korea, 
+              Her Chinese fanbase (C-fans) is among the most dedicated in the 5th-gen K-pop landscape.
+              They organize large-scale birthday projects, LED billboard displays across major Chinese cities,
+              and coordinated streaming campaigns that consistently push BABYMONSTER content into trending topics
+              on Weibo and Bilibili. YG even ran a China-exclusive <strong>JD.com (京东) video fan signing
+              on June 20, 2026</strong> with Ahyeon among the seven members. In a group that already has
+              multinational members from Thailand, Japan, and Korea,
               <strong style={{ color: "#e84040" }}> Ahyeon is the member China chose</strong>.
             </p>
             <div className="milestone-stack" style={{ maxWidth: 500 }}>
               {[
                 ["🇨🇳", "Trilingual", "Korean · English · Mandarin Chinese — fluent in all three since childhood"],
-                ["💝", "Fan Devotion", "Uses Chinese to personally connect with fans, even circumventing language barriers with staff"],
-                ["📢", "C-Fan Power", "Massive organized fan projects across Weibo, Bilibili, and physical billboards in Chinese cities"],
+                ["🎤", "Taipei Arena 2026", "First KPop act to play Taipei Arena in 2026 — worked the crowd in Mandarin"],
+                ["📢", "C-Fan Power", "JD.com video fan-sign Jun 2026 · billboards across Chinese cities · top of Weibo trends"],
               ].map(([icon, title, desc]) => (
                 <div className="milestone-card" key={title} style={{ borderColor: "rgba(232,64,64,0.2)" }}>
                   <span className="milestone-icon">{icon}</span>
@@ -600,12 +659,18 @@ const Index = () => {
               reaction videos. The original singer <strong>Rei Mei</strong> personally responded with support, saying 
               <strong style={{ color: "var(--gold)" }}> "Don't belittle or compare!"</strong> — a public endorsement of their rendition.
             </p>
+            <p style={{ fontSize: 16, lineHeight: 1.7, marginBottom: 24, color: "var(--paper)", opacity: 0.8 }}>
+              That vocal authority carried straight into 2026: on <strong style={{ color: "var(--gold)" }}>April 13, 2026</strong>,
+              Ahyeon was crowned <strong>KGMA "Solo Female Artist of April" #1</strong> with
+              <strong> 33,380 votes</strong> — her first major solo-named accolade, won while she was still
+              promoting only as a BABYMONSTER member.
+            </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 12 }}>
               {[
                 ["🏟️", "2025 MAMA Awards", "Kai Tak Stadium, Hong Kong"],
                 ["🎵", "Original Key — Live", "The 'impossible' track, uncompromised"],
                 ["🔥", "Ahyeon's High Note", "Ultra-high ad-lib that stunned the arena"],
-                ["👑", "The Definitive Version", "Chosun Ilbo: 'Before and after BABYMONSTER'"],
+                ["🏆", "KGMA Apr 2026 — #1", "Solo Female Artist of April · 33,380 votes"],
               ].map(([icon, title, desc]) => (
                 <div key={title} style={{
                   flex: "1 1 200px", padding: "16px 20px",
@@ -623,6 +688,119 @@ const Index = () => {
       </section>
 
       <div className="divider" />
+
+      {/* ===== 2026 TIMELINE ===== */}
+      <section className="tribute-section">
+        <div className="reveal">
+          <div className="section-label" style={{ color: "var(--gold)" }}>2026 — The Year So Far</div>
+          <h2 className="section-title">Six months. <em>One coronation.</em></h2>
+          <p style={{ maxWidth: 760, fontSize: 16, lineHeight: 1.7, opacity: 0.8, marginBottom: 28 }}>
+            From a sold-out Taipei Arena finale to Vogue HK covers, a KGMA Solo Female #1, two back-to-back
+            BABYMONSTER comebacks, a YouTube #1, and the world's first BABYMONSTER dome tour — here is
+            every verified Ahyeon milestone between Jan 1 and Jun 14, 2026.
+          </p>
+        </div>
+
+        {/* Stat strip */}
+        <div className="stat-strip reveal">
+          {[
+            ["149M+", "CHOOM MV views"],
+            ["58M+", "SHIT MV views (1 week)"],
+            ["#1", "Global YouTube Music Chart"],
+            ["400M", "SHEESH (fastest girl-group debut song)"],
+            ["33,380", "KGMA Solo Female #1 votes"],
+            ["440K+", "LOVE MONSTERS tour attendees"],
+          ].map(([num, label]) => (
+            <div className="stat-cell" key={label}>
+              <div className="stat-num">{num}</div>
+              <div className="stat-label">{label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="timeline reveal" style={{ marginTop: 40 }}>
+          {[
+            ["Jan 2–3, 2026", "LOVE MONSTERS Finale — Taipei Arena", "First K-pop act to play Taipei Arena in 2026. 24,000 fans across two nights, capping a tour that drew 440,000+ across Asia. Ahyeon worked the crowd in Mandarin and asked the encore: '有沒有人要吃火鍋?'"],
+            ["Jan 8, 2026", "LeSportsac × BABYMONSTER — Spectator Collection", "Japan-exclusive campaign. Ahyeon's individual pictorial released as part of the first visual drop (second visual drop followed Mar 12)."],
+            ["Feb 5, 2026", "M Countdown — 'Really Like You' (Reverse Chart Run)", "A 2024 DRIP b-side virally re-entered Korean charts after TikTok blew up. BABYMONSTER returned to M Countdown to perform it live as a full group."],
+            ["Mar 4, 2026", "Vogue Hong Kong — March Cover", "BABYMONSTER on the cover under the headline 'The Only Way Is Up.' Ahyeon featured in the cover story and interviews."],
+            ["Mar 16 → 31, 2026", "CHOOM World Tour Announced", "Japan leg confirmed Mar 16, Seoul opening dates Mar 31. First-ever solo dome concerts on the calendar (Kyocera Dome Osaka, Sep 22–23)."],
+            ["Mar 26, 2026", "Vogue × GQ Event — Hong Kong", "Ahyeon attended the Vogue HK × GQ joint event in Hong Kong. Heavy C-fan press coverage at Incheon and HKG airports."],
+            ["Apr 11, 2026", "Ahyeon's 19th Birthday 🎂", "Korean age 20. Fan birthday cafés held near YG Entertainment in Hapjeong; member Weverse messages and official BABYMONSTER socials joined in."],
+            ["Apr 13, 2026", "🏆 KGMA — 'Artist of April' Solo Female #1", "Won the Korea Grand Music Awards' Solo Female Artist of April category with 33,380 votes — her real 2026 solo accolade ahead of the May CHOOM comeback."],
+            ["Apr 17, 2026", "SHEESH — 400M YouTube Views", "747 days after release — the fastest K-pop girl-group debut song to ever hit 400M views. A halo moment ahead of the comeback."],
+            ["May 4, 2026", "💿 3rd Mini Album — CHOOM (춤)", "BABYMONSTER's 3rd mini album. 4 tracks: MOON · CHOOM · I LIKE IT · LOCKED IN. Hip-hop title-track described as a song meant to 'turn the whole world into a giant dance floor.'"],
+            ["May 9–10, 2026", "CHOOM Music-Show Debut — Hand-Mic Live", "First stages on Music Core and Inkigayo performed entirely on hand mics with no ear monitors. Allkpop article racked up 12,741 upvotes praising the live execution."],
+            ["May 11, 2026", "Asia / Oceania CHOOM Tour Dates Announced", "Tour expanded to 14+ Asia-Pacific cities including a first dome run at Kyocera Dome Osaka in September."],
+            ["May 19, 2026", "BANILA CO Brand Event — Seongsu-dong", "Ahyeon and the full BABYMONSTER lineup at the launch event for the Covericious Ultimate White Cushion in Seoul."],
+            ["May 25–30, 2026", "SUGAR HONEY ICE TEA Teasers Drop", "Summer single announced with a lime-green poster; individual teaser photos for Ahyeon and Ruka released around May 30. YG called it a 'lightning-fast' one-month follow-up to CHOOM."],
+            ["Jun 7, 2026", "🍯 SUGAR HONEY ICE TEA — MV Release", "Digital single drops at midnight KST. The cheeky-acronym summer flex anthem becomes the talk of the town for its sweet/saucy double-meaning concept."],
+            ["Jun 8, 2026", "10M Views in Under 12 Hours", "S.H.I.T. MV passes 10 million YouTube views within half a day of release."],
+            ["Jun 10, 2026", "🥇 #1 — Global YouTube Music Chart", "SUGAR HONEY ICE TEA debuts at #1 on YouTube's global music chart. The Performance Video drops the same day (already past 20M views)."],
+            ["Jun 12, 2026", "'Summer Queen' — First SHIT Stages", "First SUGAR HONEY ICE TEA music-show stages air on MBC and SBS. Chosun/OSEN declares BABYMONSTER has 'solidified Summer Queen status.'"],
+            ["Jun 20, 2026 (next)", "JD.com China Video Fan-Sign", "China-exclusive video fan signing organised on JD.com (京东自营) — 15 slots per member, including Ahyeon. Registration ran Jun 1–7."],
+          ].map(([year, title, desc]) => (
+            <div className="timeline-item" key={year as string}>
+              <div className="timeline-dot" />
+              <div className="timeline-year">{year}</div>
+              <div className="timeline-content">
+                <h4>{title}</h4>
+                <p>{desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="divider" />
+
+      {/* ===== CHOOM WORLD TOUR 2026–27 ===== */}
+      <section className="tribute-section">
+        <div className="reveal">
+          <div className="section-label" style={{ color: "var(--rose)" }}>Upcoming · 28+ Shows · 5 Continents</div>
+          <h2 className="section-title">BABYMONSTER World Tour<br /><em>[ 춤 · CHOOM ]</em></h2>
+          <p style={{ maxWidth: 760, fontSize: 16, lineHeight: 1.7, opacity: 0.8, marginBottom: 28 }}>
+            Their second world tour and biggest production yet — kicking off in Seoul on Jun 26.
+            Headlined by their <strong style={{ color: "var(--rose)" }}>first-ever solo dome concerts</strong> at
+            Kyocera Dome Osaka. North America, Europe and South America dates land in 2027.
+          </p>
+        </div>
+        <div className="tours-grid reveal">
+          {[
+            ["Jun 26–28, 2026", "Seoul", "Jamsil Indoor Stadium", "🇰🇷", "Opening"],
+            ["Jul 8–9, 2026", "Kobe", "Glion Arena Kobe", "🇯🇵", ""],
+            ["Jul 28–29, 2026", "Fukuoka", "Marine Messe Fukuoka Hall A", "🇯🇵", ""],
+            ["Aug 1–2, 2026", "Yokohama", "Pia Arena MM", "🇯🇵", ""],
+            ["Aug 11–12, 2026", "Chiba", "LaLa Arena Tokyo-Bay", "🇯🇵", ""],
+            ["Aug 16, 2026", "Nagoya", "IG Arena", "🇯🇵", ""],
+            ["Sep 5, 2026", "Manila", "SM Mall of Asia Arena", "🇵🇭", ""],
+            ["Sep 12, 2026", "Macao", "The Venetian Arena", "🇲🇴", ""],
+            ["Sep 22–23, 2026", "Osaka", "Kyocera Dome", "🇯🇵", "⭐ 1st Dome"],
+            ["Oct 17, 2026", "Jakarta", "Indonesia Arena", "🇮🇩", ""],
+            ["Nov 7–8, 2026", "Bangkok", "Impact Arena", "🇹🇭", ""],
+            ["Nov 14, 2026", "Kuala Lumpur", "Unifi Arena", "🇲🇾", ""],
+            ["Nov 21–22, 2026", "Taipei", "Taipei Arena", "🇹🇼", ""],
+            ["Nov 28–29, 2026", "Singapore", "Singapore Indoor Stadium", "🇸🇬", ""],
+            ["Dec 8, 2026", "Auckland", "Spark Arena", "🇳🇿", ""],
+            ["Dec 11, 2026", "Melbourne", "Rod Laver Arena", "🇦🇺", ""],
+            ["Dec 13, 2026", "Sydney", "Qudos Bank Arena", "🇦🇺", ""],
+            ["Jan 9, 2027", "Hong Kong", "AsiaWorld-Arena", "🇭🇰", ""],
+            ["2027 — TBA", "Americas & Europe", "North America · South America · Europe legs to be announced", "🌎", "TBA"],
+          ].map(([date, city, venue, flag, badge]) => (
+            <div className="tour-card" key={`${date}-${city}`}>
+              <div className="tour-flag">{flag}</div>
+              <div className="tour-date">{date}</div>
+              <div className="tour-city">{city}</div>
+              <div className="tour-venue">{venue}</div>
+              {badge && <div className="tour-badge">{badge}</div>}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="divider" />
+
+
 
       {/* ===== TIMELINE ===== */}
       <section className="tribute-section">
@@ -650,7 +828,10 @@ const Index = () => {
               ["Apr 1, 2024", "Official Debut — BABYMONS7ER", 'Ahyeon debuted with the full group. Over 460,000 pre-orders. Debuted #3 Circle Album Chart.'],
               ["Nov 2024", "DRIP Studio Album — 1M+ Sales, Billboard 200", "BABYMONSTER released debut studio album DRIP, selling over 1 million copies in South Korea and entering the Billboard 200."],
               ["Jan 2025", 'Hello Monsters World Tour — First Live "Dangerously"', "BABYMONSTER launched their first world tour at KSPO Dome Seoul (~26,000 seats). Ahyeon performed \"Dangerously\" live for the first time as her solo stage."],
-              ["2025–Now", "We Go Up EP · Still Writing the Story", "Ahyeon chose to skip the 2026 CSAT — a declaration of total commitment to her career as a performer. She is 18. The story is very much still being written."],
+              ["2025–26", "Hello Monsters → LOVE MONSTERS finale (Taipei, Jan 2026)", "BABYMONSTER's first world tour rolled into the LOVE MONSTERS Asia fan-concert tour, capping at Taipei Arena (Jan 2–3, 2026) — Ahyeon worked the crowd in fluent Mandarin to 24,000 fans."],
+              ["Apr 2026", "KGMA Solo Female #1 + SHEESH 400M", "Won KGMA Solo Female Artist of April (33,380 votes) on Apr 13; SHEESH hit 400M YouTube views on Apr 17 — fastest K-pop girl-group debut song ever to do so."],
+              ["May–Jun 2026", "CHOOM + SUGAR HONEY ICE TEA — back-to-back hits", "3rd mini album CHOOM (May 4, 149M+ MV views) then the summer single SUGAR HONEY ICE TEA (Jun 7) which debuted at #1 on the global YouTube chart and crossed 10M views in under 12 hours."],
+              ["Jun 2026 →", "CHOOM World Tour · First Domes", "28+ shows across Asia, Oceania, the Americas and Europe — including BABYMONSTER's first-ever solo dome concerts at Kyocera Dome Osaka (Sep 22–23, 2026). She is 19. The story is very much still being written."],
             ].map(([year, title, desc]) => (
               <div className="timeline-item" key={year}>
                 <div className="timeline-dot" />
@@ -716,7 +897,7 @@ const Index = () => {
             solo stages to sold-out arenas across four continents — <strong>at 17 and 18 years old</strong>.
           </p>
           <p>
-            There are artists you enjoy. And then there are artists where you think: <strong>I want to watch where this goes.</strong> Ahyeon is the second kind. And she is barely eighteen.
+            There are artists you enjoy. And then there are artists where you think: <strong>I want to watch where this goes.</strong> Ahyeon is the second kind. And she just turned nineteen.
           </p>
           <div className="cta-row">
             <a href="https://www.youtube.com/watch?v=xw7Y2gviWbA" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
@@ -733,7 +914,7 @@ const Index = () => {
       <footer className="tribute-footer">
         <div className="brand">JUNG AHYEON</div>
         <div className="note">정아현 · BABYMONSTER · YG Entertainment · Born April 11, 2007 · Chuncheon</div>
-        <div className="tag">Hyeonies 🦋 · Pre-Debut Era</div>
+        <div className="tag">Hyeonies 🦋 · CHOOM Era · 2026</div>
       </footer>
     </div>
   );
