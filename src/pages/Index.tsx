@@ -914,7 +914,7 @@ const Index = () => {
       <footer className="tribute-footer">
         <div className="brand">JUNG AHYEON</div>
         <div className="note">정아현 · BABYMONSTER · YG Entertainment · Born April 11, 2007 · Chuncheon</div>
-        <div className="tag">Hyeonies 🦋 · Pre-Debut Era</div>
+        <div className="tag">Hyeonies 🦋 · CHOOM Era · 2026</div>
       </footer>
     </div>
   );
